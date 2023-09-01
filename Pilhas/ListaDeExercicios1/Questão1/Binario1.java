@@ -1,4 +1,4 @@
-package ListaDeExercicios1.Questão1;
+package Pilhas.ListaDeExercicios1.Questão1;
 
 import java.util.Scanner;
 
