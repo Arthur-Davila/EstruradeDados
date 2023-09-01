@@ -12,26 +12,28 @@ public class StackInt {
     
   }
   public int top(){
-    int i;
-    for(i = this.stack.length-1; i>0;i--){
-      if()
-    }
-  }
+    //retorna o topo(ultimo)
+    int valor = this.stack[this.quant-1];
+    this.stack[this.quant-1] = 0;
+    this.quant--;
+    return valor;
+  
+     }
+  
   public void push(int n){
-      int i;
-      for(i = 0;i<this.stack.length;i++){
-      if(this.stack[i] == 0){
-        this.stack[i] = n;
-        break;
-      }
-
+    //colocar o elemento no topo
+      this.stack[this.quant] = n;
+      quant++;
       
     }
-  }
+  
   public int pop(){
-    return 1;
+    //retirar um elemento do topo
+    return this.stack[this.quant-1];
+     
   }
-  public boolean isEmpty() {
+  public boolean empty() {
+    //testa se o vetor está vazio
     if (this.quant == 0) {
         return true;
     } else {
@@ -39,10 +41,12 @@ public class StackInt {
     }
 }
 public boolean isFull() {
+  //testa se o vetor está cheio
     if (this.quant == this.stack.length) {
         return true;
     } else {
         return false;
     }
 }
+
 }
