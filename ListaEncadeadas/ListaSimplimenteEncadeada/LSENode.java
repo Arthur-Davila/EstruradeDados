@@ -1,4 +1,4 @@
-package ListaEncadeadas;
+package ListaEncadeadas.ListaSimplimenteEncadeada;
 
 public class LSENode {
     private Integer info;

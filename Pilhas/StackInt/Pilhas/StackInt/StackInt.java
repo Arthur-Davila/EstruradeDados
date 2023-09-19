@@ -1,3 +1,7 @@
+package Pilhas.StackInt;
+
+
+
 public class StackInt {
   private int[] stack;
   private int quant;

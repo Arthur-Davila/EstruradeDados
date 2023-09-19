@@ -12,6 +12,6 @@ public class Fila {
 
     }
     public int dequeue(){
-        
+        return -1;
     }
 }
