@@ -52,4 +52,25 @@ public void removerInicio() {
         System.out.println("Remoção efetuada!");
     }
 }
+public void colocarNoFinal(Integer valor){
+    LSENode novo,aux;
+    novo = new LSENode(valor);
+    aux = this.primeiro;
+    if(this.isEmpty()){
+        this.primeiro = novo;
+    }   
+    else{
+        while(aux.getProx() == null){
+        if(aux.getProx() == null){
+             aux =novo ;
+            break;
+        }else if(aux.getInfo() == valor){
+            break;
+            
+        }
+        aux = aux.getProx();
+    }
+    
+}
+}
 }
