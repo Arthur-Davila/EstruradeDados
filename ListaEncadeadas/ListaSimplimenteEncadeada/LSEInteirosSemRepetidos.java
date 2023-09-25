@@ -53,24 +53,22 @@ public void removerInicio() {
     }
 }
 public void colocarNoFinal(Integer valor){
-    LSENode novo,aux;
+    LSENode novo,aux = this.primeiro;
     novo = new LSENode(valor);
-    aux = this.primeiro;
     if(this.isEmpty()){
         this.primeiro = novo;
     }   
     else{
-        while(aux.getProx() == null){
-        if(aux.getProx() == null){
-             aux =novo ;
-            break;
-        }else if(aux.getInfo() == valor){
-            break;
-            
+        while (aux != null) {
+            if (aux.getInfo() == valor) {
+                break;
+            }
+            else if(aux.getProx() == null){
+                aux.setProx(novo);
+            }
+            aux = aux.getProx();
         }
-        aux = aux.getProx();
+    } 
     }
     
-}
-}
 }

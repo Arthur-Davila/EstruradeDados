@@ -6,6 +6,7 @@ public class TESTE{
         L.colocarNoFinal(10);
         L.colocarNoFinal(11);
         L.colocarNoFinal(10);
+        L.colocarNoFinal(13);
         L.exibirTodos();
     }
 }
