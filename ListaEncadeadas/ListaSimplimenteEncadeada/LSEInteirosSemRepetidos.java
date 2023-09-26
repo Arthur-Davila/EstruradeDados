@@ -1,6 +1,5 @@
 package ListaEncadeadas.ListaSimplimenteEncadeada;
 
-import org.w3c.dom.ls.LSException;
 
 public class LSEInteirosSemRepetidos {
     private LSENode primeiro;
@@ -12,10 +11,12 @@ public class LSEInteirosSemRepetidos {
         }
     }
     public void exibirTodos() {
-        LSENode aux;if (this.isEmpty() == true) {
+        LSENode aux;
+        if (this.isEmpty() == true) {
             System.out.println("Lista vazia!");
         } else {
-            aux = this.primeiro;while (aux != null) {
+            aux = this.primeiro;
+            while (aux != null) {
                 System.out.println(aux.getInfo());
                 aux = aux.getProx();
 }
@@ -67,6 +68,7 @@ public void colocarNoFinal(Integer valor){
             }
             else if(aux.getProx() == null){
                 aux.setProx(novo);
+                break;
             }
             aux = aux.getProx();
         }
@@ -76,14 +78,19 @@ public void colocarNoFinal(Integer valor){
     public void removerDoFinal(){
         LSENode aux;
         aux = this.primeiro;
-        while(true){
-            if(aux.getProx().getProx()==null){
+        while(aux != null){
+            if(aux.getProx()!=null&& aux.getProx().getProx() == null){
                 aux.setProx(null);
                 break;
+            }else if(aux.getProx()==null){
+                this.primeiro =null;
+                break;
             }
+            else {
             aux = aux.getProx();
+            }
         }
+    }
         
     }
     
-}

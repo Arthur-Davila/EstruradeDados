@@ -14,5 +14,10 @@ public class TESTE{
         System.out.println();
         L.removerDoFinal();
         L.exibirTodos();
+        L.removerDoFinal();
+        System.out.println();
+        L.exibirTodos();
+        L.removerDoFinal();
+        L.exibirTodos();
     }
 }
