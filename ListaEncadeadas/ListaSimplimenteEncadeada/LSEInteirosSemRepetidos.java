@@ -1,5 +1,7 @@
 package ListaEncadeadas.ListaSimplimenteEncadeada;
 
+import org.w3c.dom.ls.LSException;
+
 public class LSEInteirosSemRepetidos {
     private LSENode primeiro;
     public boolean isEmpty() {
@@ -68,7 +70,20 @@ public void colocarNoFinal(Integer valor){
             }
             aux = aux.getProx();
         }
+
     } 
+    }
+    public void removerDoFinal(){
+        LSENode aux;
+        aux = this.primeiro;
+        while(true){
+            if(aux.getProx().getProx()==null){
+                aux.setProx(null);
+                break;
+            }
+            aux = aux.getProx();
+        }
+        
     }
     
 }

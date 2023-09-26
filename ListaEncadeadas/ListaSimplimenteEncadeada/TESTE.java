@@ -8,5 +8,11 @@ public class TESTE{
         L.colocarNoFinal(10);
         L.colocarNoFinal(13);
         L.exibirTodos();
+        L.removerDoFinal();
+        System.out.println();
+        L.exibirTodos();
+        System.out.println();
+        L.removerDoFinal();
+        L.exibirTodos();
     }
 }
