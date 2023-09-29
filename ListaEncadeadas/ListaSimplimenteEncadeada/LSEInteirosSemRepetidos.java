@@ -1,8 +1,9 @@
 package ListaEncadeadas.ListaSimplimenteEncadeada;
 
-
+public static int op;
 public class LSEInteirosSemRepetidos {
     private LSENode primeiro;
+
     public boolean isEmpty() {
         if (this.primeiro == null) {
             return true;
@@ -74,7 +75,48 @@ public void colocarNoFinal(Integer valor){
         }
 
     } 
+    }  public void remover(int valor){
+        LSENode atual, anterior;
+        
+        if(this.isEmpty()){
+            System.out.println("Lista está vazia");
+        }
+        else if (this.primeiro.getProx()== null){
+            if(this.primeiro.getInfo()==valor){
+                this.primeiro =null;
+                System.out.println("Remoção efetuada!");
+            }
+            else{
+                System.out.println("Valor não encontrado.");
+            }
+        else{
+            
+            if(this.primeiro.getInfo()==valor){
+                this.primeiro = null;
+            }
+            else{
+                atual  = this.primeiro.getProx();
+                while(atual!=null){
+                    
+                    if(atual.getInfo()==valor){
+                        atual = null;
+                        anterior.setProx(atual.getProx());
+                        System.out.println("Remoção efetuada!");
+                        return;
+                    }
+                    anterior = atual;   
+                    atual = atual.getProx();
+                }System.out.println("Valor não encontrado");
+            }
+          
     }
+    
+}
+
+
+
+}
+
     public void removerDoFinal(){
         LSENode aux;
         aux = this.primeiro;
@@ -90,7 +132,9 @@ public void colocarNoFinal(Integer valor){
             aux = aux.getProx();
             }
         }
+      
+        }
     }
         
-    }
+    
     
