@@ -25,19 +25,18 @@ public class LSEInt {
         this.primeiro = novo;
     }
     }
-    public void exibirTodos(){
+    public void exibirTodos() {
         LSENode aux;
-        if(this.isEmpty()==true){
+        if (this.isEmpty() == true) {
             System.out.println("Lista vazia!");
-        }
-        else{
+        } else {
             aux = this.primeiro;
-            while(aux.getProx()!=null){
+            while (aux != null) {
                 System.out.println(aux.getInfo());
                 aux = aux.getProx();
-            }
-        }
-    }
+}
+}
+}
 
     public int procurarValor(int valor) {
         int cont =0;
@@ -101,6 +100,75 @@ public class LSEInt {
         }
         }
         }
+
+       public LSEInt copiar(){
+            LSEInt copy = new LSEInt();
+            LSENode aux = this.primeiro;
+          
+            
+          
+            if(isEmpty()==false){
+           
+            
+            while(aux!=null){
+                
+                copy.colocarNoFinal(aux.getInfo());
+                aux = aux.getProx();
+                
+                
+    
+        }
+       
+    }
+            return copy;
+
+            
+
+       } 
+       
+public void colocarNoFinal(Integer valor){
+    LSENode novo,aux = this.primeiro;
+    novo = new LSENode(valor);
+    if(this.isEmpty()){
+        this.primeiro = novo;
+    }   
+    else{
+        while (aux != null) {
+           
+            if(aux.getProx() == null){
+                aux.setProx(novo);
+                break;
+            }
+            aux = aux.getProx();
+        }
+
+    } 
+    } 
+    public void somar(LSEInt lista1,LSEInt lista2){
+             LSENode l1 = lista1.getPrimeiro();
+             LSENode l2 = lista2.getPrimeiro();
+             while(l1!=null||l2!=null){
+                if(l1==null){
+                    this.colocarNoFinal(l2.getInfo());
+                }
+                else if(l2==null){
+                    this.colocarNoFinal(l1.getInfo());
+                }
+                else{
+                    this.colocarNoFinal(l1.getInfo()+l2.getInfo());
+                }
+                if(l1 !=null){
+                    l1 = l1.getProx();
+                    
+                }
+                if(l2!=null){
+                    l2 = l2.getProx();
+                }
+             }
+    }
+    public LSENode getPrimeiro(){
+        return this.primeiro;
+    }
     }
     
 

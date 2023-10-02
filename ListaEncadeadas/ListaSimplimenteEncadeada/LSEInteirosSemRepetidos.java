@@ -1,6 +1,6 @@
 package ListaEncadeadas.ListaSimplimenteEncadeada;
 
-public static int op;
+
 public class LSEInteirosSemRepetidos {
     private LSENode primeiro;
 
@@ -134,6 +134,9 @@ public void colocarNoFinal(Integer valor){
         }
       
         }
+    public LSENode getPrimeiro(){
+        return this.primeiro;
+    }
     }
         
     
