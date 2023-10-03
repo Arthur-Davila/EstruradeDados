@@ -145,11 +145,12 @@ public void colocarNoFinal(Integer valor){
     } 
     } 
     public void somar(LSEInt lista1,LSEInt lista2){
-             LSENode l1 = lista1.getPrimeiro();
-             LSENode l2 = lista2.getPrimeiro();
+             LSENode l1 = lista1.primeiro;
+             LSENode l2 = lista2.primeiro;
+
              while(l1!=null||l2!=null){
                 if(l1==null){
-                    this.colocarNoFinal(l2.getInfo());
+                    this.colocarNoFinal(l2.getInfo());             
                 }
                 else if(l2==null){
                     this.colocarNoFinal(l1.getInfo());
