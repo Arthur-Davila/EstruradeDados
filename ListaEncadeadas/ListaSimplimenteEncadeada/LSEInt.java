@@ -107,7 +107,7 @@ public class LSEInt {
           
             
           
-            if(isEmpty()==false){
+            if(this.isEmpty()==false){
            
             
             while(aux!=null){
@@ -166,9 +166,7 @@ public void colocarNoFinal(Integer valor){
                 }
              }
     }
-    public LSENode getPrimeiro(){
-        return this.primeiro;
-    }
+   
     }
     
 
