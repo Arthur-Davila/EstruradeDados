@@ -3,6 +3,8 @@ package ListaEncadeadas.ListaDuplamenteEncadeada;
 public class LDENode{
     private Integer info;
     private LDENode prox;
+    private LDENode ant;
+    private int quant;
     public LDENode(Integer valoInteger) {
         this.info = valoInteger;
     }
@@ -17,6 +19,12 @@ public class LDENode{
     }
     public LDENode getProx() {
         return prox;
+    }
+    public void setAnt(LDENode novoAnt){
+        this.ant = novoAnt;
+    }
+    public LDENode getAnt(){
+        return this.ant;
     }
   
 }
