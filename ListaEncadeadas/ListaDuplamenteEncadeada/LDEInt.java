@@ -23,6 +23,7 @@ public class LDEInt {
                     aux.setProx(novo);
                     this.ultimo = novo;
                     quant++;
+                    break;
                 }
                 else{
                     aux = aux.getProx();
@@ -31,4 +32,5 @@ public class LDEInt {
         }
 
     }
+
 }
