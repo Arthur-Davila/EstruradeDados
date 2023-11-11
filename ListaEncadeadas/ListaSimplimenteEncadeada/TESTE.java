@@ -1,6 +1,6 @@
 package ListaEncadeadas.ListaSimplimenteEncadeada;
 
-import ListaEncadeadas.ListaDuplamenteEncadeada.LDEInteirosSemRepetidos;
+import ListaEncadeadas.ListaDuplamenteEncadeada.Atividade1.LDEInteirosSemRepetidos;
 
 public class TESTE{
     public static void main(String[] args) {

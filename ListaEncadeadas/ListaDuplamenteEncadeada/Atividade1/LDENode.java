@@ -1,4 +1,4 @@
-package ListaEncadeadas.ListaDuplamenteEncadeada;
+package ListaEncadeadas.ListaDuplamenteEncadeada.Atividade1;
 
 public class LDENode{
     private Integer info;

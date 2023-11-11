@@ -1,4 +1,4 @@
-package ListaEncadeadas.ListaDuplamenteEncadeada;
+package ListaEncadeadas.ListaDuplamenteEncadeada.Atividade1;
 
 public class LDEInteirosSemRepetidos {
     private LDENode primeiro;
