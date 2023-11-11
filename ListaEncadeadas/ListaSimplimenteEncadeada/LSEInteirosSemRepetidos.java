@@ -83,12 +83,13 @@ public void colocarNoFinal(Integer valor){
         }
         else if (this.primeiro.getProx()== null){
             if(this.primeiro.getInfo()==valor){
-                this.primeiro =null;
+                this.primeiro = null;
                 System.out.println("Remoção efetuada!");
             }
             else{
                 System.out.println("Valor não encontrado.");
             }
+        }
         else{
             
             if(this.primeiro.getInfo()==valor){
@@ -96,6 +97,7 @@ public void colocarNoFinal(Integer valor){
             }
             else{
                 atual  = this.primeiro.getProx();
+                anterior = this.primeiro;
                 while(atual!=null){
                     
                     if(atual.getInfo()==valor){
@@ -115,7 +117,6 @@ public void colocarNoFinal(Integer valor){
 
 
 
-}
 
     public void removerDoFinal(){
         LSENode aux;

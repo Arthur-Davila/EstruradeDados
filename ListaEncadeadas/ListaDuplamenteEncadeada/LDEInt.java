@@ -32,5 +32,23 @@ public class LDEInt {
         }
 
     }
+    public void remover(int valor){
+        LDENode aux = this.primeiro;
+        if(this.isEmpty()){
+            System.out.println("Lista vazia");
+        }
+        else{
+            while(aux!=null){
+                if(valor == aux.getInfo()){
+                    if(this.primeiro==this.ultimo){
+                        this.primeiro = null;
+                        this.ultimo = null;
+                        this.quant--;
+    
+                }
+            }}
+            
+        }
 
+}
 }
