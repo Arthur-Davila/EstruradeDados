@@ -34,12 +34,12 @@ public class LDEIntercalar {
                 novo.setProx(this.primeiro);
                 this.ultimo = this.primeiro;
                 this.primeiro = novo;
-                qtd++;
-            } else if (this.ultimo.getInfo() > valor) {
+                this.qtd++;
+            } else if (this.primeiro.getInfo() > valor) {
                 this.primeiro.setProx(novo);
                 novo.setAnt(this.primeiro);
                 this.ultimo = novo;
-                qtd++;
+                this.qtd++;
             }
 
         } else if (this.primeiro.getInfo() < valor) {
@@ -57,6 +57,8 @@ public class LDEIntercalar {
         else {
             while (aux != null) {
                 if (aux.getInfo() < valor) {
+                    aux.getAnt().setProx(novo);
+                    novo.setAnt(aux.getAnt());
                     novo.setProx(aux);
                     aux.setAnt(novo);
                     qtd++;
@@ -110,13 +112,13 @@ public class LDEIntercalar {
                     }
                 }
 
-                else if (aux3 == null && aux2.getInfo() > aux1.getInfo()) {
+                else if (  aux2.getInfo() > aux1.getInfo()) {
                     this.InserirDecrescente(aux1.getInfo());
-                    this.qtd = this.qtd + 1;
+                    
                     aux1 = aux1.getProx();
-                } else if (aux3 == null && aux2.getInfo() < aux1.getInfo()) {
+                } else if (aux2.getInfo() < aux1.getInfo()) {
                     this.InserirDecrescente(aux2.getInfo());
-                    this.qtd++;
+                    
                     aux2 = aux2.getProx();
                 }
 
